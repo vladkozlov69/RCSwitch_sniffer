@@ -24,7 +24,7 @@ void setup() {
 }
 
 void loop() {
-  return;
+
   if (mySwitch.available()) {
     
     int value = mySwitch.getReceivedValue();
@@ -40,9 +40,10 @@ void loop() {
       Serial.print("Protocol: ");
       Serial.println( mySwitch.getReceivedProtocol() );
 
+      u8g2.clear();
       u8g2.firstPage();
       do {
-        u8g2.clear();
+        
         u8g2.setFont(u8g2_font_6x13_tr);
         u8g2.setCursor(0, 10);
         u8g2.print("433MHz sniffer");
