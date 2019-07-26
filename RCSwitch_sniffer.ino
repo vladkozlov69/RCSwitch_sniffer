@@ -53,7 +53,9 @@ void loop() {
 
         u8g2.setCursor(0, 35);
         u8g2.print(mySwitch.getReceivedBitlength());
-        u8g2.print("bit");
+        u8g2.print("bit/");
+        u8g2.print(mySwitch.getReceivedDelay());
+        u8g2.print("ms");
 
         u8g2.setCursor(0, 45);
         u8g2.print("Protocol:");
